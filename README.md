@@ -25,7 +25,7 @@ To create a user make a **POST** request to the following URL, passing you usern
 
 ### Search and List
 Make a request to the following URL:
-`localhost:8000`
+`localhost:8000/news/`
 
 You can also add a query with the URL as:
 `localhost:8000/news?query=<your_query>`
