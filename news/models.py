@@ -36,6 +36,7 @@ class Query(models.Model):
 
 class User(AbstractBaseUser):
     name = models.CharField(max_length=50)
+    favourite_article=models.ManyToManyField(QueryResult, through='User_Favourite_Article')
 
     def get_user_id(self):
         
