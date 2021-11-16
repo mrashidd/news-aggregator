@@ -131,7 +131,7 @@ class TestViews(TestCase):
 
     def test_favourite_with_valid_id(self):
         """Testing if a valid article id is passed to add or romove from favourites. 
-        invalid means that a article does not existing with that aricle id
+        valid means that a article exists with that aricle id
         """
 
         response = self.client.post(self.find_favourite_url,**{'QUERY_STRING':'user=mpopatia&id='+str(self.dummy_article_id)})
