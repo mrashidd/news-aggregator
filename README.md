@@ -9,7 +9,7 @@ A Django application that aggregates news from two different APIs. The APIs youâ
 To install all the requirements run the following command: 
 `pip install -r requirements.txt`
 ### Pre-StartUp commands
-run the following commands to set up the database:
+run the following commands (in respective order) to set up the database:
 - `python manage.py makemigrations`
 - `python manage.py migrate`
 ### Starting the application
