@@ -104,14 +104,14 @@ Accept: application/json
 
 To add or remove from favourites, make a **POST** request to the following URL, and pass username and artile id as parameters:
 
-`localhost:8000/news/favourite?user=<username>&id=<article_id>`
+`localhost:8000/news/favourite/?user=<username>&id=<article_id>`
 
 #### Examples
 
 mark favourite
 ```
 > Request
-POST /news/favourite?user=mpopatia&id=5  HTTP/1.1
+POST /news/favourite/?user=mpopatia&id=5  HTTP/1.1
 Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ
 Accept: application/json
 
@@ -131,7 +131,7 @@ unmark favourites
 
 ```
 > Request
-POST /news/favourite?user=mpopatia&id=5  HTTP/1.1
+POST /news/favourite/?user=mpopatia&id=5  HTTP/1.1
 Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ
 Accept: application/json
 
