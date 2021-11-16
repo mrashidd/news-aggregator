@@ -148,6 +148,6 @@ Accept: application/json
 ]
 ```
 ## Documentation
-Access index.html file in `docs\_build\html\` to access documentatiom
+Access `index.html` file in `docs\_build\html\` to access documentatiom
 
 
