@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>news.tests package &#8212; newsaggregator 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="news package" href="news.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="news-tests-package">
+<h1>news.tests package<a class="headerlink" href="#news-tests-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-news.tests.testviews">
+<span id="views-tests"></span><h2>Views Tests<a class="headerlink" href="#module-news.tests.testviews" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">news.tests.testviews.</span></span><span class="sig-name descname"><span class="pre">TestViews</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_create_user_with_existing_username">
+<span class="sig-name descname"><span class="pre">test_create_user_with_existing_username</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_create_user_with_existing_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if API can handle if a new user is being created with an existing username</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_create_user_with_no_username">
+<span class="sig-name descname"><span class="pre">test_create_user_with_no_username</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_create_user_with_no_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if API return a 400 Bad Request response if no username is provided to create a user</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_favourite_get_request_including_article_id">
+<span class="sig-name descname"><span class="pre">test_favourite_get_request_including_article_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_favourite_get_request_including_article_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if a GET request is used instead of POST request to add or remove an article from favourites</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_favourite_reponse_always_in_json">
+<span class="sig-name descname"><span class="pre">test_favourite_reponse_always_in_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_favourite_reponse_always_in_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if the API response is always in json format for “favourite/” URL</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_favourite_with_invalid_id">
+<span class="sig-name descname"><span class="pre">test_favourite_with_invalid_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_favourite_with_invalid_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if an invalid article id is passed to add or romove from favourites. 
+invalid means that a article does not existing with that aricle id</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_favourite_with_valid_id">
+<span class="sig-name descname"><span class="pre">test_favourite_with_valid_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_favourite_with_valid_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if a valid article id is passed to add or romove from favourites. 
+invalid means that a article does not existing with that aricle id</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_favourites_with_existing_username">
+<span class="sig-name descname"><span class="pre">test_favourites_with_existing_username</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_favourites_with_existing_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if API returns a success response in returning a fetch favoruite query for a user</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_favourites_with_non_existing_username">
+<span class="sig-name descname"><span class="pre">test_favourites_with_non_existing_username</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_favourites_with_non_existing_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if fetch favourites request is handled by the API if a username is mentioned but a user is not 
+created by that username</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_favourites_without_username">
+<span class="sig-name descname"><span class="pre">test_favourites_without_username</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_favourites_without_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if fetch favourites request is handled by the API if a username is not mentioned.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_get_request_to_create_user">
+<span class="sig-name descname"><span class="pre">test_get_request_to_create_user</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_get_request_to_create_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if API return a 404 Not Found response if GET request instead of POST</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_if_repeated_query_fetched_from_db">
+<span class="sig-name descname"><span class="pre">test_if_repeated_query_fetched_from_db</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_if_repeated_query_fetched_from_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if a repeated query is fetched from existing database instead of making a new request.
+it is proved if the time stamp of first and repeated query is same.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_news_reponse_always_in_json">
+<span class="sig-name descname"><span class="pre">test_news_reponse_always_in_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_news_reponse_always_in_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if the API response is always in json format for “news/” URL</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_news_with_keyword">
+<span class="sig-name descname"><span class="pre">test_news_with_keyword</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_news_with_keyword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if API return a 200 OK response if a keyword is provided</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_news_without_keyword">
+<span class="sig-name descname"><span class="pre">test_news_without_keyword</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_news_without_keyword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if API return a 200 OK response if no keyword is provided</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testviews.TestViews.test_repeated_query_after_expiry">
+<span class="sig-name descname"><span class="pre">test_repeated_query_after_expiry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testviews.TestViews.test_repeated_query_after_expiry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if query is repeated but after expiry time, the API makes a new request to thiedparty news APIs instead
+of fetching old query results from the database.</p>
+<p>To do this a dummy time is created tby subtracting expiry time(120s) from current time and a query is posted with dummy time.
+and if the time stamp on repeated query result and dummy time are differnet it means a new request is sent.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-news.tests.testurls">
+<span id="urls-tests"></span><h2>Urls Tests<a class="headerlink" href="#module-news.tests.testurls" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.testurls.TestUrls">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">news.tests.testurls.</span></span><span class="sig-name descname"><span class="pre">TestUrls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testurls.TestUrls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.SimpleTestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.testurls.TestUrls.test_process_query_url_resolves">
+<span class="sig-name descname"><span class="pre">test_process_query_url_resolves</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#news.tests.testurls.TestUrls.test_process_query_url_resolves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing if the ‘create/’ url resolves and returns the create_user function from views</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">newsaggregator</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="news.html">news package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="news.html#module-news.models">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#module-news.views">Views</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="news.html#tests">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#module-news.apifunction">apifunction</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="news.html">news package</a><ul>
+      <li>Previous: <a href="news.html" title="previous chapter">news package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/news.tests.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
